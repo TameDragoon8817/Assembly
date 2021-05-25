@@ -19,14 +19,20 @@ let0:mov dx,offset mess1
   jb let0
   cmp al,'9'
   ja let0
-  and al,0dfh
+  and al,0fh
   mov ah,0
   mov bl,al
   mul bl
   mul bl
   mov bl,10
   div bl
-  add al,30h
+  add ah,30h
+  mov x,ah
+  cmp al,10
+  jb let2
+  mov ah,0
+  div bl
+  add ah,30h
   mov x+1,ah
   add al,30h
   mov x+2,al
