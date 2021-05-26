@@ -1,0 +1,24 @@
+clearsc macro
+mov ah,06h
+mov al,0
+mov bh,0F0h
+mov ch,0
+mov cl,0
+mov dh,23
+mov dl,79
+int 10h
+mov dx,0
+mov ah,2
+int 10h
+endm
+
+clearsw macro
+mov ah,06h
+mov al,0
+mov bh,27h
+mov ch,8
+mov cl,30
+mov dh,15
+mov dl,60
+int 10h
+endm
