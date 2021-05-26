@@ -64,8 +64,8 @@ push dx
 endm
 
 restore_ss macro
-push dx
-push cx
-push bx
-push ax
+pop dx
+pop cx
+pop bx
+pop ax
 endm

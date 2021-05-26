@@ -22,6 +22,7 @@ cursor 2,50
 mov ah,9
 mov dx,offset letter1
 int 21h
+
 mov ah,2ah
 int 21h
 mov nears,cx
@@ -44,6 +45,7 @@ cursor 3,50
 mov ah,9
 mov dx,offset letter2
 int 21h
+
 mov ah,2ch
 int 21h
 mov hour,ch
@@ -90,6 +92,6 @@ mov ah,2
 int 21h
 loop let2
 restore_ss
-restore_ss
+ret
 disp_2_10 endp
 end start
