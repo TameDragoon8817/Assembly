@@ -1,0 +1,71 @@
+clearsc macro
+mov ah,06h
+mov al,0
+mov bh,0F0h
+mov ch,0
+mov cl,0
+mov dh,23
+mov dl,79
+int 10h
+mov dx,0
+mov ah,2
+int 10h
+endm
+
+clearsw macro row1,rank1,row2,rank2,color
+mov ah,06h
+mov al,0
+mov ch,row1
+mov cl,rank1
+mov dh,row2
+mov dl,rank2
+mov bh,color
+int 10h
+endm
+
+windows macro row1,rank1,row2,rank2,color
+mov ah,6
+mov al,1
+mov ch,row1
+mov cl,rank1
+mov dh,row2
+mov dl,rank2
+mov bh,color
+int 10h
+endm
+
+cursor macro row,rank
+mov ah,2
+mov dh,row
+mov dl,rank
+mov bh,0
+int 10h
+endm
+
+displ macro opr
+mov ah,2
+mov dl,opr
+int 21h
+endm
+
+enter macro
+mov ah,2
+mov dl,0dh
+int 21h
+mov dl,0ah
+int 21h
+endm
+
+store_ss macro
+push ax
+push bx
+push cx
+push dx
+endm
+
+restore_ss macro
+push dx
+push cx
+push bx
+push ax
+endm
