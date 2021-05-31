@@ -217,6 +217,22 @@ disp_2_10 endp
 jmp let0
 
 prog3:
+mov ah,2bh
+mov dx offset fix1
+
+mov dx offset fix2
+
+mov dx offset fix3
+
+mov dx offset fix4
+
+mov dx offset fix5
+
+mov dx offset fix6
+
+mov dx offset fix7
+
+mov dx offset fix8
 
 
 prog4:
